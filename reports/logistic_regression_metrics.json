@@ -1,0 +1,38 @@
+{
+  "model_name": "logistic_regression",
+  "model_path": "reports/models/logistic_regression.joblib",
+  "train_metrics": {
+    "accuracy": 0.7527511537096202,
+    "precision": 0.5221162185602776,
+    "recall": 0.8053511705685619,
+    "f1": 0.6335174953959485,
+    "confusion_matrix": {
+      "tn": 3037,
+      "fp": 1102,
+      "fn": 291,
+      "tp": 1204
+    },
+    "log_loss": 0.48662558252403404,
+    "roc_auc": 0.8491695358855038,
+    "pr_auc": 0.6645857023191706,
+    "brier_score": 0.16365780717316225
+  },
+  "test_metrics": {
+    "accuracy": 0.7374024130589071,
+    "precision": 0.5034364261168385,
+    "recall": 0.7834224598930482,
+    "f1": 0.6129707112970711,
+    "confusion_matrix": {
+      "tn": 746,
+      "fp": 289,
+      "fn": 81,
+      "tp": 293
+    },
+    "log_loss": 0.49678998714414685,
+    "roc_auc": 0.8414063912785139,
+    "pr_auc": 0.6324160254841014,
+    "brier_score": 0.1687504034086286
+  },
+  "n_train": 5634,
+  "n_test": 1409
+}
