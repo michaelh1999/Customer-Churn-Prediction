@@ -1,0 +1,6 @@
+{
+  "model_name": "hist_gradient_boosting",
+  "brier_score": 0.1612309891104604,
+  "log_loss": 0.4831790945332149,
+  "figure": "reports/figures/hist_gradient_boosting_calibration.png"
+}

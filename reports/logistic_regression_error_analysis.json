@@ -1,0 +1,104 @@
+{
+  "model_name": "logistic_regression",
+  "threshold": 0.5,
+  "counts": {
+    "TN": 746,
+    "TP": 293,
+    "FP": 289,
+    "FN": 81
+  },
+  "by_contract": {
+    "FN": {
+      "Month-to-month": 0.057,
+      "One year": 0.093,
+      "Two year": 0.027
+    },
+    "FP": {
+      "Month-to-month": 0.348,
+      "One year": 0.067,
+      "Two year": 0.0
+    },
+    "TN": {
+      "Month-to-month": 0.226,
+      "One year": 0.813,
+      "Two year": 0.973
+    },
+    "TP": {
+      "Month-to-month": 0.369,
+      "One year": 0.027,
+      "Two year": 0.0
+    }
+  },
+  "by_tenure_bin": {
+    "FN": {
+      "0-12": 0.078,
+      "13-24": 0.024,
+      "25-48": 0.066,
+      "49-72": 0.047
+    },
+    "FP": {
+      "0-12": 0.287,
+      "13-24": 0.354,
+      "25-48": 0.197,
+      "49-72": 0.06
+    },
+    "TN": {
+      "0-12": 0.234,
+      "13-24": 0.354,
+      "25-48": 0.592,
+      "49-72": 0.862
+    },
+    "TP": {
+      "0-12": 0.401,
+      "13-24": 0.267,
+      "25-48": 0.145,
+      "49-72": 0.031
+    }
+  },
+  "by_charges_bin": {
+    "FN": {
+      "Q1": 0.071,
+      "Q2": 0.073,
+      "Q3": 0.026,
+      "Q4": 0.06
+    },
+    "FP": {
+      "Q1": 0.051,
+      "Q2": 0.231,
+      "Q3": 0.262,
+      "Q4": 0.277
+    },
+    "TN": {
+      "Q1": 0.824,
+      "Q2": 0.535,
+      "Q3": 0.336,
+      "Q4": 0.42
+    },
+    "TP": {
+      "Q1": 0.054,
+      "Q2": 0.161,
+      "Q3": 0.376,
+      "Q4": 0.243
+    }
+  },
+  "fn_profile": {
+    "mean_tenure": 28.666666666666668,
+    "top_contracts": {
+      "Month-to-month": 44,
+      "One year": 28,
+      "Two year": 9
+    }
+  },
+  "fp_profile": {
+    "mean_tenure": 19.878892733564015,
+    "top_contracts": {
+      "Month-to-month": 269,
+      "One year": 20
+    }
+  },
+  "notes": [
+    "False negatives (missed churners) often look like longer-tenure or longer-contract customers who still leave.",
+    "False positives often concentrate in month-to-month / high-charge segments that look risky but stay.",
+    "Feature gaps: no support tickets, usage drops, or payment failures \u2014 common real-world churn signals."
+  ]
+}

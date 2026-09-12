@@ -1,0 +1,6 @@
+{
+  "model_name": "logistic_regression",
+  "brier_score": 0.1687504034086286,
+  "log_loss": 0.49678998714414696,
+  "figure": "reports/figures/logistic_regression_calibration.png"
+}
