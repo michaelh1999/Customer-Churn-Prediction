@@ -1,0 +1,47 @@
+{
+  "default_0_5": {
+    "threshold": 0.5,
+    "f1": 0.6129707112970711,
+    "precision": 0.5034364261168385,
+    "recall": 0.7834224598930482,
+    "accuracy": 0.7374024130589071,
+    "business_value": 3650.0,
+    "tp": 293,
+    "fp": 289,
+    "tn": 746,
+    "fn": 81
+  },
+  "f1_optimal": {
+    "threshold": 0.55,
+    "f1": 0.6190998902305158,
+    "precision": 0.5251396648044693,
+    "recall": 0.7540106951871658,
+    "accuracy": 0.7537260468417317,
+    "business_value": -2350.0,
+    "tp": 282,
+    "fp": 255,
+    "tn": 780,
+    "fn": 92
+  },
+  "business_value_optimal": {
+    "threshold": 0.15,
+    "f1": 0.5336257309941521,
+    "precision": 0.3672032193158954,
+    "recall": 0.9759358288770054,
+    "accuracy": 0.5471965933286018,
+    "business_value": 37050.0,
+    "tp": 365,
+    "fp": 629,
+    "tn": 406,
+    "fn": 9
+  },
+  "assumptions": {
+    "false_positive_cost": 50.0,
+    "false_negative_cost": 500.0,
+    "retention_value": 200.0
+  },
+  "recommendation": {
+    "threshold": 0.15,
+    "rationale": "Prefer the business-value-optimal threshold when FP/FN costs and retention value are agreed assumptions; F1 treats errors symmetrically."
+  }
+}

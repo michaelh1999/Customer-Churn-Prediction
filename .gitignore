@@ -39,3 +39,6 @@ reports/models/*.pkl
 .pytest_cache/
 .coverage
 htmlcov/
+
+# matplotlib local cache
+.matplotlib_cache/
