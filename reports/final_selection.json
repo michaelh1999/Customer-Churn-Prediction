@@ -1,0 +1,14 @@
+{
+  "selected_model": "logistic_regression",
+  "selected_threshold": 0.15,
+  "selection_criteria": {
+    "predictive_performance": "HGB edges LR on F1, PR-AUC, log loss, and Brier; LR remains competitive (ROC-AUC slightly higher).",
+    "probability_quality": "Both models have usable probabilities; HGB slightly better Brier/log loss. LR probabilities are still suitable for thresholding.",
+    "business_value": "Under default YAML costs, LR at threshold 0.15 yields higher holdout business value (~37k) than HGB at its BV-optimal 0.1 (~34k).",
+    "interpretability": "Logistic regression coefficients map to log-odds — preferred for an educational project.",
+    "complexity": "LR is simpler to train, explain, and deploy; capacity gains from HGB are modest here."
+  },
+  "decision": "Use logistic_regression with business-value-optimal threshold 0.15. This demonstrates that the best ML leaderboard metric does not automatically maximize business value.",
+  "false_positive_meaning": "Customer predicted to churn who would have stayed — wasted retention offer cost.",
+  "false_negative_meaning": "Customer predicted to stay who churns — missed intervention and lost customer value."
+}
