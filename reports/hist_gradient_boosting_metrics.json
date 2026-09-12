@@ -1,0 +1,38 @@
+{
+  "model_name": "hist_gradient_boosting",
+  "model_path": "reports/models/hist_gradient_boosting.joblib",
+  "train_metrics": {
+    "accuracy": 0.8301384451544196,
+    "precision": 0.6244218316373727,
+    "recall": 0.903010033444816,
+    "f1": 0.7383100902379,
+    "confusion_matrix": {
+      "tn": 3327,
+      "fp": 812,
+      "fn": 145,
+      "tp": 1350
+    },
+    "log_loss": 0.361876867146074,
+    "roc_auc": 0.9285266746447245,
+    "pr_auc": 0.8081104702696912,
+    "brier_score": 0.11648584981757017
+  },
+  "test_metrics": {
+    "accuracy": 0.7629524485450674,
+    "precision": 0.5374531835205992,
+    "recall": 0.767379679144385,
+    "f1": 0.6321585903083701,
+    "confusion_matrix": {
+      "tn": 788,
+      "fp": 247,
+      "fn": 87,
+      "tp": 287
+    },
+    "log_loss": 0.4831790945332149,
+    "roc_auc": 0.8372936526389213,
+    "pr_auc": 0.6511245808902125,
+    "brier_score": 0.1612309891104604
+  },
+  "n_train": 5634,
+  "n_test": 1409
+}

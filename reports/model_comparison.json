@@ -1,0 +1,136 @@
+{
+  "metrics_table": [
+    {
+      "model": "logistic_regression",
+      "accuracy": 0.7374024130589071,
+      "precision": 0.5034364261168385,
+      "recall": 0.7834224598930482,
+      "f1": 0.6129707112970711,
+      "log_loss": 0.49678998714414685,
+      "roc_auc": 0.8414063912785139,
+      "pr_auc": 0.6324160254841014,
+      "brier_score": 0.1687504034086286
+    },
+    {
+      "model": "hist_gradient_boosting",
+      "accuracy": 0.7629524485450674,
+      "precision": 0.5374531835205992,
+      "recall": 0.767379679144385,
+      "f1": 0.6321585903083701,
+      "log_loss": 0.4831790945332149,
+      "roc_auc": 0.8372936526389213,
+      "pr_auc": 0.6511245808902125,
+      "brier_score": 0.1612309891104604
+    }
+  ],
+  "business_by_model": {
+    "logistic_regression": {
+      "default_0_5": {
+        "threshold": 0.5,
+        "f1": 0.6129707112970711,
+        "precision": 0.5034364261168385,
+        "recall": 0.7834224598930482,
+        "accuracy": 0.7374024130589071,
+        "business_value": 3650.0,
+        "tp": 293,
+        "fp": 289,
+        "tn": 746,
+        "fn": 81
+      },
+      "f1_optimal": {
+        "threshold": 0.55,
+        "f1": 0.6190998902305158,
+        "precision": 0.5251396648044693,
+        "recall": 0.7540106951871658,
+        "accuracy": 0.7537260468417317,
+        "business_value": -2350.0,
+        "tp": 282,
+        "fp": 255,
+        "tn": 780,
+        "fn": 92
+      },
+      "business_value_optimal": {
+        "threshold": 0.15,
+        "f1": 0.5336257309941521,
+        "precision": 0.3672032193158954,
+        "recall": 0.9759358288770054,
+        "accuracy": 0.5471965933286018,
+        "business_value": 37050.0,
+        "tp": 365,
+        "fp": 629,
+        "tn": 406,
+        "fn": 9
+      },
+      "assumptions": {
+        "false_positive_cost": 50.0,
+        "false_negative_cost": 500.0,
+        "retention_value": 200.0
+      },
+      "recommendation": {
+        "threshold": 0.15,
+        "rationale": "Prefer the business-value-optimal threshold when FP/FN costs and retention value are agreed assumptions; F1 treats errors symmetrically."
+      }
+    },
+    "hist_gradient_boosting": {
+      "default_0_5": {
+        "threshold": 0.5,
+        "f1": 0.6321585903083701,
+        "precision": 0.5374531835205992,
+        "recall": 0.767379679144385,
+        "accuracy": 0.7629524485450674,
+        "business_value": 1550.0,
+        "tp": 287,
+        "fp": 247,
+        "tn": 788,
+        "fn": 87
+      },
+      "f1_optimal": {
+        "threshold": 0.55,
+        "f1": 0.6354285714285715,
+        "precision": 0.5548902195608783,
+        "recall": 0.7433155080213903,
+        "accuracy": 0.7735982966643009,
+        "business_value": -3550.0,
+        "tp": 278,
+        "fp": 223,
+        "tn": 812,
+        "fn": 96
+      },
+      "business_value_optimal": {
+        "threshold": 0.1,
+        "f1": 0.5290227773695811,
+        "precision": 0.364741641337386,
+        "recall": 0.9625668449197861,
+        "accuracy": 0.5450674237047551,
+        "business_value": 33650.0,
+        "tp": 360,
+        "fp": 627,
+        "tn": 408,
+        "fn": 14
+      },
+      "assumptions": {
+        "false_positive_cost": 50.0,
+        "false_negative_cost": 500.0,
+        "retention_value": 200.0
+      },
+      "recommendation": {
+        "threshold": 0.1,
+        "rationale": "Prefer the business-value-optimal threshold when FP/FN costs and retention value are agreed assumptions; F1 treats errors symmetrically."
+      }
+    }
+  },
+  "tradeoffs": {
+    "logistic_regression": {
+      "predictive_performance": "Strong linear baseline; competitive ROC/PR-AUC.",
+      "interpretability": "High \u2014 coefficients relate to log-odds.",
+      "complexity": "Low \u2014 fast train/infer, few hyperparameters.",
+      "training_inference_cost": "Very low."
+    },
+    "hist_gradient_boosting": {
+      "predictive_performance": "Can capture nonlinear interactions without heavy tuning.",
+      "interpretability": "Lower \u2014 need importances/SHAP for explanations.",
+      "complexity": "Medium \u2014 trees, more knobs, larger artifact.",
+      "training_inference_cost": "Higher than LR but still fine for this dataset size."
+    }
+  }
+}
